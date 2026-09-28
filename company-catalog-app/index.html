@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Device Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Company portal</p>
+          <h1>Device Catalog</h1>
+        </div>
+        <div class="header-actions">
+          <input id="searchInput" type="search" aria-label="Search products" placeholder="Search product or number" />
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="panel">
+            <h2>Categories</h2>
+            <div id="categoryList" class="button-stack"></div>
+          </div>
+
+          <div class="panel">
+            <h2>Subcategories</h2>
+            <div id="subcategoryList" class="button-stack"></div>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div class="content-header">
+            <div>
+              <p id="sectionLabel" class="section-label">All products</p>
+              <h2 id="sectionTitle">Company inventory</h2>
+            </div>
+          </div>
+
+          <div id="productGrid" class="product-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="productCardTemplate">
+      <article class="product-card">
+        <div class="image-wrap">
+          <img src="" alt="" />
+        </div>
+        <div class="product-body">
+          <div class="meta-row">
+            <span class="brand-badge"></span>
+            <span class="category-tag"></span>
+          </div>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
+          <div class="detail-row">
+            <span class="label">Order number</span>
+            <strong class="product-number"></strong>
+          </div>
+          <div class="actions">
+            <button class="copy-button" type="button">Copy number</button>
+            <a class="vendor-link" href="" target="_blank" rel="noreferrer">Manufacturer</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
